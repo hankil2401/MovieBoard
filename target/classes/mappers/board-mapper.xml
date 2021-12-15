@@ -3,14 +3,15 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Board">
 	<insert id="insertMovie">
-		insert into MOVIE (genre, title, author, length, rating, releasedDate, plot)
+		insert into MOVIE (genre, title, author, length, rating, releasedDate, plot, photo)
 		values
-		(#{genre} , #{title} , #{author} , #{length}, #{rating}, #{releasedDate}, #{plot})
+		(#{genre} , #{title} , #{author} , #{length}, #{rating}, #{releasedDate}, #{plot}, #{photo})
 	</insert>
 	<update id="updateMovie">
 		update MOVIE
 		set title=#{title}, plot=#{plot}, author=#{author},
-		genre=#{genre}
+		genre=#{genre}, length=#{length}, releasedDate=#{releasedDate},
+		photo=#{photo}, rating=#{rating}
 		where seq=#{seq}
 	</update>
 	<delete id="deleteMovie">

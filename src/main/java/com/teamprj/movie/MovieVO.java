@@ -4,11 +4,12 @@ public class MovieVO {
 	private int seq;
 	private String genre;
 	private String title;
+	private String photo;
 	private String author;
 	private String plot;
 	private String releasedDate;
 	private String length;
-	private int rating;
+	private float rating;
 	private int cnt;
 	public int getSeq() {
 		return seq;
@@ -58,10 +59,16 @@ public class MovieVO {
 	public void setLength(String length) {
 		this.length = length;
 	}
-	public int getRating() {
+	public float getRating() {
 		return rating;
 	}
-	public void setRating(int rating) {
+	public void setRating(float rating) {
 		this.rating = rating;
+	}
+	public String getPhoto() {
+		return photo;
+	}
+	public void setPhoto(String photo) {
+		this.photo = photo;
 	}
 }

@@ -26,6 +26,8 @@
 		<td><form:input path="genre" value="${u.genre}" /></td></tr>
 		<tr><td>Title</td>
 		<td><form:input path="title" value="${u.title}" /></td></tr>
+		<tr><td>Photo</td>
+		<td><form:input path="photo" value="${u.photo}" /></td></tr>
 		<tr><td>Author</td>
 		<td><form:input path="author" value="${u.author}" /></td></tr>
 		<tr><td>Length</td>

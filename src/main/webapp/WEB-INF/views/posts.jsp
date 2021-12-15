@@ -48,6 +48,7 @@
 			<th>Id</th>
 			<th>Genre</th>
 			<th>Title</th>
+			<th>Photo</th>
 			<th>Author</th>
 			<th>Plot</th>
 			<th>Length</th>
@@ -61,6 +62,7 @@
 				<td>${u.seq}</td>
 				<td>${u.genre}</td>
 				<td>${u.title}</td>
+				<td><img src="${u.photo}"></td>
 				<td>${u.author}</td>
 				<td>${u.plot}</td>
 				<td>${u.length}</td>

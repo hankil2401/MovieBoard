@@ -4,7 +4,7 @@
 <mapper namespace="User">
 	
 	<select id="getUser" resultType="user">
-		select userid, username from member where
+		select userid, username from MovieMember where
 		userid=#{userid} and password=#{password}
 	</select>
 </mapper>

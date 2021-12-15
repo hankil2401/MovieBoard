@@ -1,11 +1,15 @@
 package com.teamprj.movie;
 
+import java.util.UUID;
+
+import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * Handles requests for the application home page.
@@ -30,7 +34,7 @@ public class BoardController {
 	}
 	@RequestMapping(value = "/movie/addok", method = RequestMethod.POST)
 	public String addPostOK(MovieVO vo) {
-		int i = boardService.insertMovie(vo);
+		int i = boardService.insertMovie(vo);		
 		if(i==0)
 			System.out.println("영화 추가 실패 ");
 		else
