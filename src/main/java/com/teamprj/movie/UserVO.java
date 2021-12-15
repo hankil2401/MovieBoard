@@ -1,7 +1,5 @@
 package com.teamprj.movie;
 
-import java.util.Date;
-
 public class UserVO {
 	private String userid;
 	private String username;

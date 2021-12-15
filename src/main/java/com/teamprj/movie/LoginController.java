@@ -33,11 +33,11 @@ public class LoginController {
 		UserVO loginvo = service.getUser(vo);
 		if(loginvo != null) {
 			session.setAttribute("login", loginvo);
-			System.out.println("로그�?� 성공! ");
-			return "redirect:/board/list";
+			System.out.println("로그인 성공! ");
+			return "redirect:/movie/list";
 		}
 		else {
-			System.out.println("로그�?� 실페!!!");
+			System.out.println("로그인 실페!!!");
 			return "redirect:/login/login";
 		}
 	}

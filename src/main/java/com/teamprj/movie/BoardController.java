@@ -18,17 +18,17 @@ public class BoardController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/board/list", method = RequestMethod.GET)
+	@RequestMapping(value = "/movie/list", method = RequestMethod.GET)
 	public String boardlist(Model model) {
 		model.addAttribute("list", boardService.getMovieList());
 		return "posts";
 	}
 	
-	@RequestMapping(value="/board/add", method = RequestMethod.GET)
+	@RequestMapping(value="/movie/add", method = RequestMethod.GET)
 	public String addPost() {
 		return "addpostform";
 	}
-	@RequestMapping(value = "/board/addok", method = RequestMethod.POST)
+	@RequestMapping(value = "/movie/addok", method = RequestMethod.POST)
 	public String addPostOK(MovieVO vo) {
 		int i = boardService.insertMovie(vo);
 		if(i==0)
@@ -39,14 +39,14 @@ public class BoardController {
 		return "redirect:list";
 	}
 	
-	@RequestMapping(value = "/board/editform/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/movie/editform/{id}", method = RequestMethod.GET)
 	public String editPost(@PathVariable("id") int id, Model model) {
 		MovieVO movieVO = boardService.getMovie(id);
 		model.addAttribute("movieVO", movieVO);
 		return "editform";
 	}
 	
-	@RequestMapping(value = "/board/editok", method = RequestMethod.POST)
+	@RequestMapping(value = "/movie/editok", method = RequestMethod.POST)
 	public String editPostOK(MovieVO vo) {
 		int i = boardService.updateMovie(vo);
 		if(i==0)
@@ -57,7 +57,7 @@ public class BoardController {
 		return "redirect:list";
 	}
 	
-	@RequestMapping(value = "/board/deleteok/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/movie/deleteok/{id}", method = RequestMethod.GET)
 	public String deletePost(@PathVariable("id") int id) {
 		int i = boardService.deleteMovie(id);
 		if(i==0)

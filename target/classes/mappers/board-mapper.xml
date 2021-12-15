@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Board">
+	<insert id="insertMovie">
+		insert into MOVIE (genre, title, author, length, rating, releasedDate, plot)
+		values
+		(#{genre} , #{title} , #{author} , #{length}, #{rating}, #{releasedDate}, #{plot})
+	</insert>
+	<update id="updateMovie">
+		update MOVIE
+		set title=#{title}, plot=#{plot}, author=#{author},
+		genre=#{genre}
+		where seq=#{seq}
+	</update>
+	<delete id="deleteMovie">
+		delete from MOVIE where seq=#{seq}
+	</delete>
+	<select id="getMovie" resultType="movie">
+		select * from MOVIE where seq=#{seq}
+	</select>
+	<select id="getMovieList" resultType="movie">
+		select * from MOVIE order by seq desc
+	</select>
+</mapper>
