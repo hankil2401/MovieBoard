@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Edit Form</title>
+<title>Edit Movie</title>
 <style>
 #edit td:ntt-child(odd) {
 	text-align: center;
@@ -18,18 +18,24 @@
 </head>
 <body>
 
-<h1>Edit Form</h1>
-<form:form commandName="boardVO" method="POST" action="../editok">
+<h1>Edit Movie</h1>
+<form:form commandName="movieVO" method="POST" action="../editok">
 	<form:hidden path="seq" />
 	<table id="edit">
-		<tr><td>Category</td>
-		<td><form:input path="category" value="${u.category}" /></td></tr>
+		<tr><td>Genre</td>
+		<td><form:input path="genre" value="${u.genre}" /></td></tr>
 		<tr><td>Title</td>
 		<td><form:input path="title" value="${u.title}" /></td></tr>
-		<tr><td>Writer</td>
-		<td><form:input path="writer" value="${u.writer}" /></td></tr>
-		<tr><td>Content</td>
-		<td><form:textarea cols="50" rows="5" path="content" value="${u.content}"/></td></tr>
+		<tr><td>Author</td>
+		<td><form:input path="author" value="${u.author}" /></td></tr>
+		<tr><td>Length</td>
+		<td><form:input path="length" value="${u.length}" /></td></tr>
+		<tr><td>Rating</td>
+		<td><form:input path="rating" value="${u.rating}" /></td></tr>
+		<tr><td>Release Date</td>
+		<td><form:input path="releasedDate" value="${u.releasedDate}" /></td></tr>
+		<tr><td>Plot</td>
+		<td><form:textarea cols="50" rows="5" path="plot" value="${u.plot}"/></td></tr>
 	</table>
 	<input type="submit" value="Edit"/>
 	<input type="button" value="Cancel" onclick="history.back()"/>

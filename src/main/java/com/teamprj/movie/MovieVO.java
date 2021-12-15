@@ -1,21 +1,26 @@
 package com.teamprj.movie;
 
-import java.util.Date;
-
 public class MovieVO {
 	private int seq;
-	private String category;
+	private String genre;
 	private String title;
-	private String writer;
-	private String content;
-	private Date regdate;
+	private String author;
+	private String plot;
+	private String releasedDate;
+	private String length;
+	private int rating;
 	private int cnt;
-	
 	public int getSeq() {
 		return seq;
 	}
 	public void setSeq(int seq) {
 		this.seq = seq;
+	}
+	public String getGenre() {
+		return genre;
+	}
+	public void setGenre(String genre) {
+		this.genre = genre;
 	}
 	public String getTitle() {
 		return title;
@@ -23,23 +28,23 @@ public class MovieVO {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getWriter() {
-		return writer;
+	public String getAuthor() {
+		return author;
 	}
-	public void setWriter(String writer) {
-		this.writer = writer;
+	public void setAuthor(String author) {
+		this.author = author;
 	}
-	public String getContent() {
-		return content;
+	public String getPlot() {
+		return plot;
 	}
-	public void setContent(String content) {
-		this.content = content;
+	public void setPlot(String plot) {
+		this.plot = plot;
 	}
-	public Date getRegdate() {
-		return regdate;
+	public String getReleasedDate() {
+		return releasedDate;
 	}
-	public void setRegdate(Date regdate) {
-		this.regdate = regdate;
+	public void setReleasedDate(String releasedDate) {
+		this.releasedDate = releasedDate;
 	}
 	public int getCnt() {
 		return cnt;
@@ -47,10 +52,16 @@ public class MovieVO {
 	public void setCnt(int cnt) {
 		this.cnt = cnt;
 	}
-	public String getCategory() {
-		return category;
+	public String getLength() {
+		return length;
 	}
-	public void setCategory(String category) {
-		this.category = category;
+	public void setLength(String length) {
+		this.length = length;
+	}
+	public int getRating() {
+		return rating;
+	}
+	public void setRating(int rating) {
+		this.rating = rating;
 	}
 }

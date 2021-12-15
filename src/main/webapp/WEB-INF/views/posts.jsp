@@ -46,28 +46,32 @@
 	<table id="list" width="90%">
 		<tr>
 			<th>Id</th>
-			<th>Category</th>
+			<th>Genre</th>
 			<th>Title</th>
-			<th>Writer</th>
-			<th>Content</th>
-			<th>Regdate</th>
+			<th>Author</th>
+			<th>Plot</th>
+			<th>Length</th>
+			<th>Release Date</th>
+			<th>Rating</th>
 			<th>Edit</th>
 			<th>Delete</th>
 		</tr>
 		<c:forEach items="${list}" var="u">
 			<tr>
 				<td>${u.seq}</td>
-				<td>${u.category}</td>
+				<td>${u.genre}</td>
 				<td>${u.title}</td>
-				<td>${u.writer}</td>
-				<td>${u.content}</td>
-				<td>${u.regdate}</td>
+				<td>${u.author}</td>
+				<td>${u.plot}</td>
+				<td>${u.length}</td>
+				<td>${u.releasedDate}</td>
+				<td>${u.rating}</td>
 				<td><a href="editform/${u.seq}">Edit</a></td>
 				<td><a href="javascript:delete_ok('${u.seq}')">Delete</a></td>
 			</tr>
 		</c:forEach>
 	</table>
 	<br />
-	<a href="add">Add New Post</a>
+	<a href="add">Add New Movie</a>
 </body>
 </html>

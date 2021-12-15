@@ -41,8 +41,8 @@ public class BoardController {
 	
 	@RequestMapping(value = "/board/editform/{id}", method = RequestMethod.GET)
 	public String editPost(@PathVariable("id") int id, Model model) {
-		MovieVO boardVO = boardService.getMovie(id);
-		model.addAttribute("boardVO", boardVO);
+		MovieVO movieVO = boardService.getMovie(id);
+		model.addAttribute("movieVO", movieVO);
 		return "editform";
 	}
 	
