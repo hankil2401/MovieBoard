@@ -39,10 +39,22 @@
 		if (a)
 			location.href='deleteok/' + id;
 	}
+	function GenreList(){
+	    var action_src = "/movie/movie/genre/" + document.getElementsByName("genre")[0].value;
+	    var your_form = document.getElementById('gettingGenre');
+	    your_form.action = action_src ;
+	}
 </script>
 </head>
 <body>
 	<h1>영화 List</h1>
+	<p>
+	<a href="ratingorder">sort by rating</a>
+	<a href="list">sort by ID desc</a></p>
+	<form id="gettingGenre" onsubmit="GenreList()">
+    <input type="text" name="genre">
+    <input type="submit" value="Search">
+	</form>
 	<table id="list" width="90%">
 		<tr>
 			<th>Id</th>
@@ -62,7 +74,7 @@
 				<td>${u.seq}</td>
 				<td>${u.genre}</td>
 				<td>${u.title}</td>
-				<td><img src="${u.photo}"></td>
+				<td><img src="${u.photo}" width="100"></td>
 				<td>${u.author}</td>
 				<td>${u.plot}</td>
 				<td>${u.length}</td>

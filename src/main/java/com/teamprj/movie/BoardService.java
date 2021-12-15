@@ -8,4 +8,6 @@ public interface BoardService {
 	public int updateMovie(MovieVO vo);
 	public MovieVO getMovie(int seq);
 	public List<MovieVO> getMovieList();
+	public List<MovieVO> getMovieRating();
+	public List<MovieVO> getGenre(String genre);
 }

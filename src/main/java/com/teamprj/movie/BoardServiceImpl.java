@@ -24,6 +24,10 @@ public class BoardServiceImpl implements BoardService {
 		return movieDAO.getMovieList();
 	}
 	@Override
+	public List<MovieVO> getMovieRating() {
+		return movieDAO.getMovieRating();
+	}
+	@Override
 	public int deleteMovie(int id) {
 		return movieDAO.deleteMovie(id);
 	}
@@ -31,5 +35,8 @@ public class BoardServiceImpl implements BoardService {
 	public int updateMovie(MovieVO vo) {
 		return movieDAO.updateMovie(vo);
 	}
-
+	@Override
+	public List<MovieVO> getGenre(String genre) {
+		return movieDAO.getGenre(genre);
+	}
 }

@@ -1,5 +1,6 @@
 package com.teamprj.movie;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.apache.commons.io.FilenameUtils;
@@ -25,6 +26,18 @@ public class BoardController {
 	@RequestMapping(value = "/movie/list", method = RequestMethod.GET)
 	public String boardlist(Model model) {
 		model.addAttribute("list", boardService.getMovieList());
+		return "posts";
+	}
+	
+	@RequestMapping(value = "/movie/ratingorder", method = RequestMethod.GET)
+	public String ratinglist(Model model) {
+		model.addAttribute("list", boardService.getMovieRating());
+		return "posts";
+	}
+	
+	@RequestMapping(value = "/movie/genre/{genre}", method = RequestMethod.GET)
+	public String GenreList(@PathVariable("genre") String genre, Model model) {
+		model.addAttribute("list", boardService.getGenre(genre));
 		return "posts";
 	}
 	
