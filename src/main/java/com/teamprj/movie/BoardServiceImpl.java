@@ -24,8 +24,8 @@ public class BoardServiceImpl implements BoardService {
 		return movieDAO.getMovieList();
 	}
 	@Override
-	public List<MovieVO> getMovieRating() {
-		return movieDAO.getMovieRating();
+	public List<MovieVO> getMovieDate() {
+		return movieDAO.getMovieDate();
 	}
 	@Override
 	public int deleteMovie(int id) {

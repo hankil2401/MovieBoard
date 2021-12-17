@@ -29,9 +29,9 @@ public class BoardController {
 		return "posts";
 	}
 	
-	@RequestMapping(value = "/movie/ratingorder", method = RequestMethod.GET)
-	public String ratinglist(Model model) {
-		model.addAttribute("list", boardService.getMovieRating());
+	@RequestMapping(value = "/movie/dateorder", method = RequestMethod.GET)
+	public String Datelist(Model model) {
+		model.addAttribute("list", boardService.getMovieDate());
 		return "posts";
 	}
 	

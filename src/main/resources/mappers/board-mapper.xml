@@ -23,8 +23,8 @@
 	<select id="getMovieList" resultType="movie">
 		select * from MOVIE order by seq desc
 	</select>
-	<select id="getMovieRating" resultType="movie">
-		select * from MOVIE order by rating desc
+	<select id="getMovieDate" resultType="movie">
+		select * from MOVIE order by releasedDate desc
 	</select>
 	<select id="getGenre" resultType="movie">
 		select * from MOVIE where genre=#{genre}

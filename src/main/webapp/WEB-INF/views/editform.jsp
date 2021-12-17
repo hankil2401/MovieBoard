@@ -9,19 +9,87 @@
 <meta charset="UTF-8">
 <title>Edit Movie</title>
 <style>
-#edit td:ntt-child(odd) {
+* {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: #eee;
+}
+
+.edit {
+    position: absolute;
+	display: block;
+	width: 450px;
 	text-align: center;
-	background-color: #006bb3;
-	color: white;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 0px 25px 2px #00000022;
+}
+
+.edit-input {
+    width: 100%;
+}
+
+.edit-input input {
+    box-sizing: border-box;
+    width: 90%;
+    border: none;
+    outline: none;
+    padding: 15px 10px;
+    margin: 5px 0;
+    background-color: #e3f1e3;
+}
+
+.edit-input textarea {
+	box-sizing: border-box;
+    width: 90%;
+    border: none;
+    outline: none;
+    padding: 15px 10px;
+    margin: 5px 0;
+    background-color: #e3f1e3;
+}
+
+.tab-edit_post {
+	width: 100%;
+}
+.tab-edit_post td {
+	width: 50%;
+}
+
+.btn-edit_post {
+    width: 90%; 
+    padding: 15px;
+    margin: 5px 0;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 5px;
+    color: #5ba75b;
+    font-weight: 900;
+    font-size: 18px;
+    transition: all .1s;
+    box-shadow: 2px 0px 5px 2px #00000022;
+}
+
+.btn-edit_post:hover {
+    box-shadow: 2px 0px 10px 2px #00000022;
+}
+
+.btn-edit_post:active {
+    transform: translateY(5%);
 }
 </style>
 </head>
 <body>
-
+<div class="edit">
 <h1>Edit Movie</h1>
 <form:form commandName="movieVO" method="POST" action="../editok">
 	<form:hidden path="seq" />
-	<table id="edit">
+	<table class="edit-input">
 		<tr><td>Genre</td>
 		<td><form:input path="genre" value="${u.genre}" /></td></tr>
 		<tr><td>Title</td>
@@ -39,8 +107,11 @@
 		<tr><td>Plot</td>
 		<td><form:textarea cols="50" rows="5" path="plot" value="${u.plot}"/></td></tr>
 	</table>
-	<input type="submit" value="Edit"/>
-	<input type="button" value="Cancel" onclick="history.back()"/>
+	<table class="tab-edit_post">
+		<tr><td><button class="btn-edit_post" type="submit">Edit</button></td>
+		<td><button class="btn-edit_post" type="cancel" onclick="history.back()">Cancel</button>
+	</table>
 </form:form>
+</div>
 </body>
 </html>

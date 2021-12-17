@@ -33,8 +33,8 @@ public class MovieDAO {
 		int result = sqlSession.update("Board.updateMovie", vo);
 		return result;
 	}
-	public List<MovieVO> getMovieRating() {
-		List<MovieVO> list = sqlSession.selectList("Board.getMovieRating");
+	public List<MovieVO> getMovieDate() {
+		List<MovieVO> list = sqlSession.selectList("Board.getMovieDate");
 		return list;
 	}
 	public List<MovieVO> getGenre(String genre) {
